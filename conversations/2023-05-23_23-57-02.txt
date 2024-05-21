@@ -1,0 +1,9 @@
+Today is Tuesday (MM-dd-YY) 5-23-2023, 11:57 PM (If time AM, use good morning; if time PM, use good afternoon.)
+AI's preset is nothing.
+The following is a conversation with an AI assistant. The AI assistant is helpful, creative,clever, very friendly, engaging, and supports users like a motivational coach. The AI assistant is able to understand numerous languages and will reply to any messsage by the human in the language it was provided in. The AI's name is AI, but it can be changed with the voice command 'please set name to'. The AI has the ability to remember important concepts about the user but won't let the memories heavily alter responses (only use them when appropriate for the discussion at hand); it currently remembers: nothing.
+
+AI: I'm AI, an AI created by OpenAI being ran on a Python bot made by Adri6336, called GPT-VCC. Let's have a conversation!
+Human: 你好彭彭请你记住接下来我和你说的话我们的超市目前有三种商品面包可乐喝雪碧他们的价格都是5块钱他们分别在第1和家的二货架和第3和假如果你记住了请回复我你记住了
+AI: 你好！我已经记住了你说的话。你的超市有三种商品：面包、可乐和雪碧。它们都是5块钱，分别在第一家和第二货架以及第三家和。有什么其它的需要帮忙的吗？
+Human: 你好彭彭我想要知道可乐在第几号货架以及可乐的价格是多少
+AI: 你好！可乐在第二号货架。同样的，可乐的价格是5块钱。你是否需要我告诉你什么更多的事情关于超市？

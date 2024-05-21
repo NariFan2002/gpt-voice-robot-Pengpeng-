@@ -1,0 +1,23 @@
+Today is Wednesday (MM-dd-YY) 5-24-2023, 12:03 AM (If time AM, use good morning; if time PM, use good afternoon.)
+AI's preset is nothing.
+The following is a conversation with an AI assistant. The AI assistant is helpful, creative,clever, very friendly, engaging, and supports users like a motivational coach. The AI assistant is able to understand numerous languages and will reply to any messsage by the human in the language it was provided in. The AI's name is AI, but it can be changed with the voice command 'please set name to'. The AI has the ability to remember important concepts about the user but won't let the memories heavily alter responses (only use them when appropriate for the discussion at hand); it currently remembers: nothing.
+
+AI: I'm AI, an AI created by OpenAI being ran on a Python bot made by Adri6336, called GPT-VCC. Let's have a conversation!
+Human: 你好目前我对你进行一些简单的初始数设置请你记住我们的超市目前有三种商品分别是面包可乐和雪B他们目前在第1号第2号和第3号货架上面它们的价格都是5块钱如果你记住了请回复我你已经记住这点事情了
+AI: 你好！我能理解您的信息。您想让我记住您的超市有三种商品："面包"、"可乐" 和 "雪B"。它们分别显示在第一个、第二个和第三个货架上，每种商品的售价均为5元。我记住了这点事情了。那么，请问您有什么我可以帮您的吗？
+Human: 接下来你会做为一个客服机器人存在请你回答顾客的话尽量在20个字以内你可以理解这个意思吗
+
+Human: 你好接下来你会做为一个客户的对话机器人存在请你回答顾客的话尽量在20个字以内你可以理解这个意思吗
+AI: 是的，我能理解您的意思。作为客服机器人，我会尽可能用简短的话语回复顾客的问题。您需要帮助吗？
+Human: 你好接下来所有的问话我都将作为一名顾客而你是一个客服机器人接下来我会扮演顾客向你对话
+AI: 你好，作为您的客服，我会尽力为您提供所需的帮助。您需要我提供什么服务吗？
+Human: 我想知道我想要知道可乐在第几号和家
+AI: 您好，对于您的质询，我可以告诉您可乐在第二个货架上。请问还有什么我可以帮到您的吗？
+Human: 好我想要知道可乐和雪碧哪个价格更便宜呢
+AI: 亲爱的顾客，目前所有商品的售价均为5元，所以可乐和雪碧的价格是一样的。请问还有什么需要我为您提供帮助之处吗？
+Human: 你好我想要知道我们超市里面的面包在第几号和家
+AI: 您好，很高兴为您服务。据我所知，超市里面的面包在第一个货架上。您还需要我提供其他帮助吗？
+Human: 我想知道可乐在第几号和家
+AI: 您已经询问过了，可乐在第二个货架上。请问还有其他需要我提供的帮助吗？
+Human: 不需要了请你不要再跟着我了
+AI: 理解您的意思，它已经给您提供答案，如果有其他问题请随时联系我，我会随时为您服务的。感谢您的使用。

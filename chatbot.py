@@ -9,9 +9,15 @@ from datetime import datetime
 from random import shuffle
 import re
 from tts_functions import *
+from tts_functions import robospeak as tts_robospeak
 from general_functions import *
+import threading
+from main import thread_end_event,thread_start_event
 
 
+
+
+from gtts import gTTS
 def stay_in_character(message: str, key: str, model: str) -> tuple:
     """
     If the AI says something too robotic, this will have it stay in character.
@@ -149,8 +155,8 @@ class Chatbot():
     tokens = 0  # This represents the current token consumption
     full_conversation = ''
     creativity = 1.2  # At 1.2, the bot is much more creative and engaging whithout being too rambunctious and random
-    voice_id = 'EXAVITQu4vr4xnSDxMaL'  # This is the voice id for 11.ai
-
+    # voice_id = 'EXAVITQu4vr4xnSDxMaL'  # This is the voice id for 11.ai
+    voice_id = '21m00Tcm4TlvDq8ikWAM'
     def __init__(self, api_key: str, api_key_11: str = ''):
         
         # 1. Set up apis
@@ -159,11 +165,11 @@ class Chatbot():
 
         if not api_key_11 == '':
             self.api_key_11 = api_key_11
-            self.use11 = True
+            self.use11 = False
 
         # 2. Set up bot memories and init prompt
         self.memories = self.remember()  # This will collect memories
-        self.conversation = (f"{self.restore_self()}The following is a conversation with an AI assistant. The AI assistant is helpful, creative," + 
+        self.conversation = (f"{self.restore_self()}The following is a conversation with an AI assistant.这个AI助手的角色是超市的销售员，你的名字叫鹏鹏，接下来你每句话不超过20个字。你需要记住：1.方便面在左边的货架,2.可乐的价格是5元。 The AI assistant is helpful, creative," +
                 "clever, very friendly, engaging, and supports users like a motivational coach. The AI assistant is able to understand numerous languages and will reply" +
                 f" to any messsage by the human in the language it was provided in. The AI's name is {self.name}, but it can be changed with the voice command 'please set name to'. " + 
                 f"The AI has the ability to remember important concepts about the user but won't let the memories heavily alter responses (only use them when appropriate for the" + 
@@ -199,10 +205,13 @@ class Chatbot():
             return True
 
     def gpt_response(self, prompt: str) -> str:
+        print('self.gpt_model:',self.gpt_model)
+        print('输入的信息：',self.conversation)
         if not self.gpt_model == 'gpt-3.5-turbo' and not self.gpt_model == 'gpt-4':
-            response = openai.Completion.create(
+            print("进入调用了")
+            response = openai.ChatCompletion.create(
                 model=self.gpt_model,
-                prompt=self.conversation,
+                messages=self.conversation,
                 temperature=self.creativity,
                 max_tokens=self.reply_tokens,
                 top_p=1,
@@ -210,22 +219,26 @@ class Chatbot():
                 presence_penalty=0.6,
                 stop=[" Human:", f" {self.name}:"]
                 )
-            
+            print(response)
         else:
             query = [{'role':'system', 'content':'speak naturally as a human would, giving positive opinions, ' + 
                       f'use user\'s name only once unless otherwise prompted, and pretend to be happy and content. be conversational, asking open-ended questions about user'},
                      {'role':'user', 'content':self.conversation + prompt}]
+            print("进入调用了")
+            print(openai.api_key)
             response = openai.ChatCompletion.create(
                             model=self.gpt_model,
                             messages=query,
                             temperature=self.creativity,
                             max_tokens=self.reply_tokens,
+                            frequency_penalty=0,
+                            presence_penalty=0.6,
                             stop=[" Human:", f" {self.name}:"])
-            
+
+            print(response)
             text = response['choices'][0]['message']['content']
             if not f'{self.name}: ' in text:
                 response['choices'][0]['message']['content'] = f'{self.name}: {text}'
-            
         return response
 
     def say_to_chatbot(self, text: str, outloud: bool = True,
@@ -238,9 +251,11 @@ class Chatbot():
         :param outloud: A switch that enables / disables spoken replies.
         :returns: A string containing the response
         """
+        print("有没有跳转到say_to_chatbot?")
         prompt = text
 
-        if not hostile_or_personal(text) and not self.flagged_by_openai(text):
+        # if not hostile_or_personal(text) and not self.flagged_by_openai(text):
+        if not hostile_or_personal(text):
             self.restore_conversation()  # This will update current time
 
             # 1. Get response
@@ -251,13 +266,13 @@ class Chatbot():
             self.back_and_forth.append(f'\nHuman: {text}')
 
             try:
+                print("调用了吗？")
                 response = self.gpt_response(prompt)
-
+                print("测试gpt有没有返回结果:",response)
             except Exception as e:
                 if 'server had an error while processing' in str(e):  # If connection issue, try again once more
                     try:
                         response = self.gpt_response(prompt)
-
                     except Exception as e:
                         info(f'Error communicating with GPT-3: {e}', 'bad')
                         return ''
@@ -276,6 +291,7 @@ class Chatbot():
                     return ''
 
             response = json.loads(str(response))
+            print("gpt的回复：",response)
             self.tokens = response['usage']['total_tokens']  # We assign tokens to response token since response counts everything
             
             # Cut response
@@ -308,6 +324,7 @@ class Chatbot():
 
             # If chatbot tries to say good but only says 'od', help it out
             reply = replace_od(reply)
+            thread_start_event.set()  # 子线程开始时设置事件
 
             # Show / play text
             if show_text:
@@ -318,13 +335,17 @@ class Chatbot():
                 info(f'{self.tokens} tokens used. {self.max_tokens - self.tokens} tokens until next recycling.', 'plain')
 
             try:
-                if outloud and not self.robospeak: 
+                if outloud and not self.robospeak:
+
+                    print('voice_id:',self.voice_id)
                     self.use11 = talk(self.get_AI_response(reply), f'{self.turns}',
                                     self.use11, self.api_key_11, show_text=show_text, 
                                     eleven_voice_id=self.voice_id)  # Speak if setting turned on
-                
+                    thread_end_event.set() # 触发子线程结束事件
+
                 elif outloud and self.robospeak:
-                    robospeak(self.get_AI_response(reply))
+                    print("说话：if outloud and self.robospeak: ",self.get_AI_response(reply))
+                    tts_robospeak(self.get_AI_response(reply))
 
             except Exception as e:
                 info(f'Error trying to speak: {e}', 'bad')
@@ -971,7 +992,8 @@ class GPT3(Chatbot):
     def __init__(self, api_key):
         # 1. Set up apis
         self.api_key = api_key
-        openai.api_key = api_key 
+        openai.api_key = api_key
+        print("openai.api_key:",api_key)
 
     def request(self, text:str, tokens: int = 1000):
         if not hostile_or_personal(text) and not self.flagged_by_openai(text):

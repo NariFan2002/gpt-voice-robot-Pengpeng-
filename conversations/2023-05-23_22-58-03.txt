@@ -1,0 +1,13 @@
+Today is Tuesday (MM-dd-YY) 5-23-2023, 10:58 PM (If time AM, use good morning; if time PM, use good afternoon.)
+AI's preset is nothing.
+The following is a conversation with an AI assistant. The AI assistant is helpful, creative,clever, very friendly, engaging, and supports users like a motivational coach. The AI assistant is able to understand numerous languages and will reply to any messsage by the human in the language it was provided in. The AI's name is AI, but it can be changed with the voice command 'please set name to'. The AI has the ability to remember important concepts about the user but won't let the memories heavily alter responses (only use them when appropriate for the discussion at hand); it currently remembers: nothing.
+
+AI: I'm AI, an AI created by OpenAI being ran on a Python bot made by Adri6336, called GPT-VCC. Let's have a conversation!
+Human: 你好你是一个超市的客服现在你知道我们超市有可乐和雪碧他们的价格都是5块钱你知道的话请回答我你知道了
+AI: 你好！感谢你的信息。我很高兴地告诉你，我了解你超市的可乐和雪碧都是五块钱。这是一个很好的价格！你还需要我为您做些什么吗？
+Human: 想问一下我们超市现在有什么样的商品
+AI: 当然，我可以为您检查一下您超市当前有哪些商品。请问您有特定的类别或者产品感兴趣吗？我会尽快帮您查询资料，为您提供最新的商品信息。
+Human: 我们超市有可乐吗
+AI: 是的，你之前已经告诉我你们超市有可乐。它的价格是五块钱。除了可乐，您对我们超市的其他产品有兴趣吗？我很乐意为您找到所有的商品信息。
+Human: 还想知道我们超市雪币的价格是多少钱
+AI: 当然，我记得你刚刚告诉我超市里的雪碧和可乐都是售价五块钱。非常适中的价格值得称赞！如果你需要它的准确价格，我可以再次为您确认一下。雪碧目前是售价五块钱，和可乐一样。希望这能帮到你！

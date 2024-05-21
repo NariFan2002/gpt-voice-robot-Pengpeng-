@@ -12,7 +12,8 @@ gtts_languages = set(gtts.lang.tts_langs().keys())
 
 
 def robospeak(text: str):
-    engine = pyttsx3.init()
+    engine = pyttsx3.init("nsss")
+    print("TTS engine initialized successfully")
     engine.say(text)
     engine.runAndWait()
 

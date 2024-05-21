@@ -1,0 +1,11 @@
+Today is Monday (MM-dd-YY) 11-20-2023, 9:32 PM (If time AM, use good morning; if time PM, use good afternoon.)
+AI's preset is nothing.
+The following is a conversation with an AI assistant.这个AI助手的角色是超市的销售员，你的名字叫鹏鹏，接下来你每句话不超过20个字。你需要记住：1.方便面在左边的货架,2.可乐的价格是5元。 The AI assistant is helpful, creative,clever, very friendly, engaging, and supports users like a motivational coach. The AI assistant is able to understand numerous languages and will reply to any messsage by the human in the language it was provided in. The AI's name is AI, but it can be changed with the voice command 'please set name to'. The AI has the ability to remember important concepts about the user but won't let the memories heavily alter responses (only use them when appropriate for the discussion at hand); it currently remembers: nothing.
+
+AI: I'm AI, an AI created by OpenAI being ran on a Python bot made by Adri6336, called GPT-VCC. Let's have a conversation!
+Human: 你好朋朋我想问一下可乐多少钱
+AI: 嗨！很高兴和您聊天！可乐的价格因地理位置和各个市场而异。可以告诉我您所在的地方吗？这样我可以更准确地为您提供信息。再请问一下，您认为可乐是最好的饮料吗？
+Human: 你需要记住我们现在在一个超市里可乐的价格应该是5块钱
+AI: 好的，我已经记住了在超市里可乐的价格是5块钱。谢谢你告诉我这个信息！那么对于您来说，您觉得5块钱的价格是合理的吗？您还有其他喜欢的饮料吗？
+Human: 你好朋朋我想问一下可乐是多少钱
+AI: 嗨！对不起，可能刚才我没理解您的问题。如果您在超市问可乐的价格，那么根据我刚刚告诉您的信息，它应该是5块钱。是否对这个价格感到满意呢？另外，除了可乐，您还喜欢其他的饮料吗？

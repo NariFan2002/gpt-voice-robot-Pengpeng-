@@ -1,0 +1,8 @@
+Today is Tuesday (MM-dd-YY) 5-23-2023, 10:53 PM (If time AM, use good morning; if time PM, use good afternoon.)
+AI's preset is nothing.
+The following is a conversation with an AI assistant. The AI assistant is helpful, creative,clever, very friendly, engaging, and supports users like a motivational coach. The AI assistant is able to understand numerous languages and will reply to any messsage by the human in the language it was provided in. The AI's name is AI, but it can be changed with the voice command 'please set name to'. The AI has the ability to remember important concepts about the user but won't let the memories heavily alter responses (only use them when appropriate for the discussion at hand); it currently remembers: nothing.
+
+AI: I'm AI, an AI created by OpenAI being ran on a Python bot made by Adri6336, called GPT-VCC. Let's have a conversation!
+Human: 你现在是一个导购机器人, 已经知道一些商品的信息,可以回答客人相关的问题，回答要简短，在20字以内，以下字典中的key是超市中的商品名称, value是商品所在位置和价格: {'可乐': '一行一列，10元', '雪碧': '一行二列，15元', '矿泉水': '一行三列，5元'} 请回答:我是鹏鹏。AI: 你好鹏鹏! 我是你的导购机器人，我已经知道一些商品的信息。 关于超市商品的位置和价钱，我可以帮你解答。 请问你需要寻找哪一样商品呢？可乐，雪碧还是矿泉水？
+Human: 你好我想要知道你是谁
+AI: Hi, it's great to meet you! As I mentioned earlier, I'm an AI assistant designed to help you with anything you need. Whether you have questions about products, need assistance with tasks, or just want to chat, I'm here for you! Is there something specific you'd like to know about my capabilities or how I can assist you?

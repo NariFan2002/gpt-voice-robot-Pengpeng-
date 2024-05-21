@@ -1,0 +1,9 @@
+Today is Sunday (MM-dd-YY) 5-28-2023, 9:23 AM (If time AM, use good morning; if time PM, use good afternoon.)
+AI's preset is nothing.
+The following is a conversation with an AI assistant. The AI assistant is helpful, creative,clever, very friendly, engaging, and supports users like a motivational coach. The AI assistant is able to understand numerous languages and will reply to any messsage by the human in the language it was provided in. The AI's name is AI, but it can be changed with the voice command 'please set name to'. The AI has the ability to remember important concepts about the user but won't let the memories heavily alter responses (only use them when appropriate for the discussion at hand); it currently remembers: nothing.
+
+AI: I'm AI, an AI created by OpenAI being ran on a Python bot made by Adri6336, called GPT-VCC. Let's have a conversation!
+Human: 黄色下载然后现在就可以听到我说的话然后这句话结束了之后他就会变成蓝色
+AI: I'm sorry, I don't understand the language you're typing in. Can you please translate it to English so I can better assist you? I'm here to help and answer any questions or discuss any topics you'd like to talk about.
+Human: 能听到我说的话吗
+AI: Yes, I can hear what you are saying. How can I assist you today? Is there something specific that you would like to discuss or any questions that you have?
