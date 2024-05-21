@@ -1,2 +1,2 @@
-OpenAI_Key=sk-yb1BsOYZPsz18D7njNak05kJUFnHrUKfX78Xo2D19ujP75xl
-(optional)ElevenLabs_Key=473dc5fbd93cb06cea8b6b0f441fe00f
+OpenAI_Key=sk-
+(optional)ElevenLabs_Key=
